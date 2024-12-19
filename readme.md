@@ -35,3 +35,25 @@ The request body should contain the following fields:
   "password": "password123"
 }
 ```
+# User Login Endpoint Documentation
+
+## Endpoint: `/api/users/login`
+
+### Description:
+This endpoint allows users to log in by providing their email and password. The server will validate the credentials, and if the user is found and the password is correct, a JWT (JSON Web Token) is generated for authentication. If the credentials are invalid, an error message will be returned.
+
+### Request Method:
+- **POST**
+
+### Request Body:
+The request body should contain the following fields:
+
+- `email` (required): The email address of the user. It must be a valid email format.
+- `password` (required): The password of the user.
+
+#### Example of the Request Body:
+```json
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}

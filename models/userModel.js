@@ -29,7 +29,7 @@ const userSchema = mongoose.Schema({
     }
 });
 
-userSchema.methods.genrateAuthToken = function (password)  {
+userSchema.methods.genrateAuthToken = function ()  {
     const token = jwt.sign({_id: this._id}, process.env.JWT_SECRET_KEY);
     return token
 }

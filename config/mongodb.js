@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const backend = process.env.MONGODB_URL;
+const backend = process.env.MONGODB_URL
 
 module.exports = async () => {
   try {

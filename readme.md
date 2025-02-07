@@ -35,6 +35,7 @@ The request body should contain the following fields:
   "password": "password123"
 }
 ```
+
 # User Login Endpoint Documentation
 
 ## Endpoint: `/api/users/login`
@@ -57,3 +58,33 @@ The request body should contain the following fields:
   "email": "john.doe@example.com",
   "password": "password123"
 }
+```
+
+# User Profile Endpoint Documentation
+
+## Endpoint: `/api/users/profile`
+
+### Description:
+This endpoint allows authenticated users to retrieve their profile information. The user must provide a valid JWT token in the request headers.
+
+### Request Method:
+- **GET**
+
+### Request Headers:
+The request must include the following header:
+
+- `Authorization`: The JWT token in the format `Bearer <token>`.
+
+### Response:
+The response will contain the user's profile information.
+
+#### Example of the Response:
+```json
+{
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "john.doe@example.com"
+}
+```
